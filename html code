@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONCERT BOOKING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Concert Booking </h1>
+    </header>
+
+    <section class="booking">
+        <h2>Book Your Tickets Now!</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="concert">Select Concert:</label>
+            <select id="concert" name="concert">
+                <option value="bts">BTS Concert</option>
+                <option value="blackpink">BLACKPINK Concert</option>
+                <option value="exo">EXO Concert</option>
+            </select>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Concert Booking South Korea</p>
+    </footer>
+    <script>
+        var images = ['download.jpg', 'BTS.jpg', 'BLACKPINK.jpg', 'EXO.jpg'];
+        var currentIndex = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundImage = 'url(' + images[currentIndex] + ')';
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackground, 5000); // Change every 10 seconds (5000 milliseconds)
+    </script>
+</body>
+</html>
